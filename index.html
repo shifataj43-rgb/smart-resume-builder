@@ -1,92 +1,442 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Smart Resume Builder</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<title>Smart Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
+
 
 <div class="container">
 <div class="developer">
 
-<p>
-Built by: Shifa Taj
-</p>
+
+<h3>Built by Shifa Taj</h3>
+
 
 <p>
 Email: shifataj43@gmail.com
 </p>
 
+
+
 </div>
-<a href="https://digitalheroesco.com" target="_blank">
 
-<button>
-Built for Digital Heroes
-</button>
-
-</a>
 
 <h1>Smart Resume Builder</h1>
 
 <p>Create your professional resume instantly</p>
 
 
+
 <div class="form">
+
 
 <h2>Personal Details</h2>
 
+
+<label>Profile Photo</label>
+
+<input 
+type="file"
+id="photo"
+accept="image/*">
+
+
 <input id="name" placeholder="Full Name">
+
+<input id="address" placeholder="Address">
 
 <input id="email" placeholder="Email">
 
 <input id="phone" placeholder="Phone">
 
-<input id="location" placeholder="Location">
+<input id="dob" placeholder="Date of Birth">
+
+<input id="nationality" placeholder="Nationality">
+
+
+
+
+
+<h2>Objective</h2>
+
+<textarea 
+id="objective"
+placeholder="Write your career objective">
+</textarea>
+
+
+
+
 
 
 <h2>Education</h2>
 
-<input id="education" placeholder="Degree / College">
+
+<div id="educationContainer">
 
 
-<h2>Skills</h2>
-
-<input id="skills" placeholder="Skills">
+<div class="educationBox">
 
 
-<h2>Experience</h2>
+<input 
+class="course"
+placeholder="Course / Degree">
 
-<textarea id="experience" placeholder="Work Experience"></textarea>
+
+<input 
+class="college"
+placeholder="School / College">
 
 
-<button onclick="generateResume()">
-Generate Resume
-</button>
+<input 
+class="grade"
+placeholder="Grade / Percentage">
 
-<button onclick="downloadPDF()">
-Download Resume PDF
+
+<input 
+class="year"
+placeholder="Year">
+
+
+<button type="button" onclick="this.parentElement.remove()">
+
+Remove
+
 </button>
 
 
 </div>
+</div>
+
+<button type="button" onclick="addEducation()">
+
++ Add Education
+
+</button>
+
+
+
+
+
+
+<h2>Experience</h2>
+
+
+<div id="experienceContainer">
+
+
+<div class="experienceBox">
+
+
+<input 
+class="company"
+placeholder="Company Name">
+
+
+<input 
+class="jobTitle"
+placeholder="Job Title">
+
+
+<input 
+class="startDate"
+placeholder="Start Date">
+
+
+<input 
+class="endDate"
+placeholder="End Date">
+
+
+
+<textarea 
+class="experienceDetails"
+placeholder="Experience Details">
+</textarea>
+
+<button type="button" onclick="this.parentElement.remove()">
+Remove
+</button>
+</div>
+
+
+</div>
+
+
+<button type="button" onclick="addExperience()">
+
++ Add Experience
+
+</button>
+
+
+
+
+
+
+
+<h2>Skills</h2>
+
+
+<div id="skillsContainer">
+
+
+<div class="skillBox">
+
+
+<input 
+class="skill"
+placeholder="Enter skill">
+
+
+</div>
+<button type="button" onclick="this.parentElement.remove()">
+Remove
+</button>
+
+</div>
+
+
+<button type="button" onclick="addSkill()">
+
++ Add Skill
+
+</button>
+
+
+
+
+
+
+
+
+<h2>Interests</h2>
+
+<textarea
+id="interest"
+placeholder="Your interests">
+</textarea>
+
+
+
+
+
+
+<h2>Projects</h2>
+
+
+<div id="projectsContainer">
+
+
+<div class="projectBox">
+
+
+<input
+class="projectName"
+placeholder="Project Name">
+
+
+
+<textarea
+class="projectDescription"
+placeholder="Project Description">
+</textarea>
+
+
+
+<input
+class="projectTech"
+placeholder="Technologies Used">
+
+
+
+<input
+class="projectLink"
+placeholder="Project Link">
+
+
+</div>
+
+<button type="button" onclick="this.parentElement.remove()">
+Remove
+</button>
+</div>
+
+
+
+<button type="button" onclick="addProject()">
+
++ Add Project
+
+</button>
+
+
+
+
+
+
+<h2>Certifications</h2>
+
+
+<div id="certificationsContainer">
+
+
+<div class="certificateBox">
+
+
+<input
+class="certificateName"
+placeholder="Certification Name">
+
+
+
+<input
+class="issuedBy"
+placeholder="Issued By">
+
+
+
+<input
+class="certificateYear"
+placeholder="Year">
+
+
+</div>
+<button type="button" onclick="this.parentElement.remove()">
+Remove
+</button>
+
+</div>
+
+
+
+<button type="button" onclick="addCertification()">
+
++ Add Certification
+
+</button>
+
+
+
+
+
+<h2>Languages</h2>
+
+
+<div id="languagesContainer">
+
+
+<div class="languageBox">
+
+
+<input
+class="language"
+placeholder="Language">
+
+
+<input
+class="level"
+placeholder="Level (Basic/Fluent)">
+
+
+</div>
+
+<button type="button" onclick="this.parentElement.remove()">
+Remove
+</button>
+</div>
+
+
+
+
+<button type="button" onclick="addLanguage()">
+
++ Add Language
+
+</button>
+
+
+
+
+
+
+
+</div>
+<div class="action-buttons">
+
+
+<button onclick="generateResume()">
+
+Generate Resume
+
+</button>
+
+
+
+<button onclick="downloadPDF()">
+
+Download Resume PDF
+
+</button>
+
+
+</div>
+
 
 
 
 <div id="resume">
 
+
 <h2>Your Resume Preview</h2>
+
 
 <p>Your resume will appear here</p>
 
+
 </div>
 
 
+
+
+
+<a href="https://digitalheroesco.com" target="_blank">
+
+
+<button>
+
+Built for Digital Heroes
+
+</button>
+
+
+</a>
+
+
+
+
+
 </div>
+
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="script.js"></script>
 
+
 </body>
+
+
 </html>
