@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Resume Builder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<div class="developer">
+
+<p>
+Built by: Shifa Taj
+</p>
+
+<p>
+Email: shifataj43@gmail.com
+</p>
+
+</div>
+<a href="https://digitalheroesco.com" target="_blank">
+
+<button>
+Built for Digital Heroes
+</button>
+
+</a>
+
+<h1>Smart Resume Builder</h1>
+
+<p>Create your professional resume instantly</p>
+
+
+<div class="form">
+
+<h2>Personal Details</h2>
+
+<input id="name" placeholder="Full Name">
+
+<input id="email" placeholder="Email">
+
+<input id="phone" placeholder="Phone">
+
+<input id="location" placeholder="Location">
+
+
+<h2>Education</h2>
+
+<input id="education" placeholder="Degree / College">
+
+
+<h2>Skills</h2>
+
+<input id="skills" placeholder="Skills">
+
+
+<h2>Experience</h2>
+
+<textarea id="experience" placeholder="Work Experience"></textarea>
+
+
+<button onclick="generateResume()">
+Generate Resume
+</button>
+
+<button onclick="downloadPDF()">
+Download Resume PDF
+</button>
+
+
+</div>
+
+
+
+<div id="resume">
+
+<h2>Your Resume Preview</h2>
+
+<p>Your resume will appear here</p>
+
+</div>
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
