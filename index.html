@@ -373,36 +373,70 @@ Remove
 <div class="action-buttons">
 
 
-<button onclick="generateResume()">
-
-Generate Resume
-
-</button>
-
-
-
-<button onclick="downloadPDF()">
-
-Download Resume PDF
-
-</button>
+<button type="button" onclick="generateResume()">Generate Resume</button>
+<button type="button" onclick="downloadPDF()">Download PDF</button>
 
 
 </div>
 
 
 
+    <div id="resumeContent">
 
-<div id="resume">
+        <!-- HEADER -->
+        <div class="resume-header">
+            <img id="r_photo" />
+            <h1 id="r_name">Your Name</h1>
+            <p>
+                <span id="r_email"></span> |
+                <span id="r_phone"></span> |
+                <span id="r_address"></span>
+            </p>
+        </div>
 
+        <!-- OBJECTIVE -->
+        <div class="resume-section">
+            <h2>Objective</h2>
+            <p id="r_objective"></p>
+        </div>
 
-<h2>Your Resume Preview</h2>
+        <!-- EDUCATION -->
+        <div class="resume-section">
+            <h2>Education</h2>
+            <div id="r_education"></div>
+        </div>
 
+        <!-- EXPERIENCE -->
+        <div class="resume-section">
+            <h2>Experience</h2>
+            <div id="r_experience"></div>
+        </div>
 
-<p>Your resume will appear here</p>
+        <!-- SKILLS -->
+        <div class="resume-section">
+            <h2>Skills</h2>
+            <ul id="r_skills"></ul>
+        </div>
 
+        <!-- PROJECTS -->
+        <div class="resume-section">
+            <h2>Projects</h2>
+            <div id="r_projects"></div>
+        </div>
 
-</div>
+        <!-- CERTIFICATIONS -->
+        <div class="resume-section">
+            <h2>Certifications</h2>
+            <div id="r_certifications"></div>
+        </div>
+
+        <!-- LANGUAGES -->
+        <div class="resume-section">
+            <h2>Languages</h2>
+            <div id="r_languages"></div>
+        </div>
+
+    </div>
 
 
 
