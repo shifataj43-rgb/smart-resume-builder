@@ -304,19 +304,28 @@ function generateResume() {
 
     // EDUCATION
     let edu = "";
-    document.querySelectorAll(".educationBox").forEach(e => {
-        let course = e.querySelector(".course").value;
-        let college = e.querySelector(".college").value;
-        let year = e.querySelector(".year").value;
 
-        if(course){
-            edu += `<p><b>${course}</b> - ${college} (${year})</p>`;
-        }
-    });
-    let r_education = document.getElementById("r_education");
-    r_education.innerHTML = edu;
-    // Hide the entire section wrapper if empty
-    r_education.parentElement.style.display = edu === "" ? "none" : "block";
+document.querySelectorAll(".educationBox").forEach(e => {
+    let course = e.querySelector(".course").value;
+    let college = e.querySelector(".college").value;
+    let year = e.querySelector(".year").value;
+    let grade = e.querySelector(".grade").value;
+
+    if (course) {
+        edu += `
+            <p>
+                <b>${course}</b> - ${college} (${year})
+                ${grade ? ` | Grade: ${grade}` : ""}
+            </p>
+        `;
+    }
+});
+
+let r_education = document.getElementById("r_education");
+r_education.innerHTML = edu;
+
+// Hide section if empty
+r_education.parentElement.style.display = edu === "" ? "none" : "block";
 
 
     // EXPERIENCE
