@@ -295,3 +295,47 @@ a{
     width:220px;
 
 }
+.page-break {
+    page-break-before: always;
+    break-before: page;
+}
+#r_photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#resumeContent {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: white;
+
+    /* ✅ 0.5 inch margin = 12.7mm */
+    padding: 12.7mm;
+
+    box-sizing: border-box;
+}
+.resume-card,
+.resume-header,
+.resume-section {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#resume {
+    padding: 10px;
+}
+/* helps avoid ugly breaks */
+.resume-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 15px;
+}
